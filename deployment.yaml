@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: sample-python-deployment
   labels:
-    app: nginx
+    app: pyt-app
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: nginx
+      app: pyt-app
   template:
     metadata:
       labels:
-        app: nginx
+        app: pyt-app
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: python-app
+        image: livevil8/python-sample:v1
         ports:
-        - containerPort: 80
+        - containerPort: 8000
