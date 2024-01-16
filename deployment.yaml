@@ -17,5 +17,13 @@ spec:
       containers:
       - name: python-app
         image: livevil8/python-sample:v1
+        #This is a part of ConfigMap
+        env:
+        - name: DB-PORT
+          valueFrom: 
+            configMapRef:
+              name: test-cm
+              key: db-port
+        
         ports:
         - containerPort: 8000
