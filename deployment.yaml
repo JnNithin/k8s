@@ -26,7 +26,7 @@ spec:
             #  key: db-port
         volumeMounts:
           - name: db-connection
-            mount: /opt
+            mountPath: /opt
         ports:
         - containerPort: 8000
       # instead of env we can use volumes
