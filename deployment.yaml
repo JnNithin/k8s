@@ -24,7 +24,7 @@ spec:
           #  configMapKeyRef:
            #   name: test-cm
             #  key: db-port
-        volume Mounts:
+        volumeMounts:
           - name: db-connection
             mount: /opt
         ports:
